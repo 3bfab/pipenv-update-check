@@ -44,9 +44,7 @@ def get_package_versions(package_type='--uptodate'):
         print("Unable to parse the version list from pip. " "Does `pip list --format=json` work for you?")
         sys.exit(1)
 
-
-if __name__ == "__main__":
-
+def main():
     print("Loading package versions...\n")
 
     # Unchanged Packages
@@ -133,3 +131,6 @@ if __name__ == "__main__":
     for key, data in table_data.items():
         table = terminaltables.AsciiTable(data)
         print(table.table)
+
+if __name__ == "__main__":
+    main()
