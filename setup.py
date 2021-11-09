@@ -16,7 +16,7 @@ setup(
   author_email = 'cuneyt@3bfab.com',      # Type in your E-Mail
   url = 'https://github.com/3bfab/pipenv-update-check',   # Provide either the link to your github or to your website
   download_url = 'https://github.com/3bfab/pipenv-update-check/archive/refs/tags/v_0.2.4.tar.gz',    # I explain this later on
-  keywords = ['SOME', 'MEANINGFULL', 'KEYWORDS'],   # Keywords that define your package best
+  keywords = ['PIPENV', 'UPDATE', 'CHECK'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'terminaltables',
           'toml',
