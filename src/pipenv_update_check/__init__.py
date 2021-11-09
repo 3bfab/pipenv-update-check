@@ -10,7 +10,7 @@ from distutils.version import LooseVersion
 import terminaltables
 import toml
 
-pipfile_packages = list(toml.load("Pipfile").get("packages").keys())
+pipfile_packages = [x.lower() for x in toml.load("Pipfile").get("packages").keys()]
 
 
 def get_package_versions(package_type='--uptodate'):
@@ -39,7 +39,7 @@ def get_package_versions(package_type='--uptodate'):
         sys.exit(0)
 
     try:
-        return json.loads(cmd_response_string)
+        return json.loads(cmd_response_string.lower())
     except Exception:  # Py2 raises ValueError, Py3 JSONEexception
         print("Unable to parse the version list from pip. " "Does `pip list --format=json` work for you?")
         sys.exit(1)
